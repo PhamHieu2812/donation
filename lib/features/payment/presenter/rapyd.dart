@@ -1,11 +1,12 @@
 import 'dart:convert';
 import 'dart:math';
 import 'package:convert/convert.dart';
+import 'package:donation/core/string_constant.dart';
 import 'package:http/http.dart' as http;
 
 import 'package:crypto/crypto.dart';
 
-  /*
+/*
   
   Card number : 4665 8406 5703 7344
   VD: 06/27
@@ -34,11 +35,11 @@ class Rapyd {
   //1. Generating body
   Map<String, String> _getBody() {
     Map<String, String> map = <String, String>{
-      "amount": amount.toString(),
-      "currency": "USD",
-      "country": "US",
-      "complete_checkout_url": "https://www.rapyd.net/cancel",
-      "cancel_checkout_url": "https://www.rapyd.net/cancel"
+      StringConstant.amount: amount.toString(),
+      StringConstant.currency: StringConstant.USD,
+      StringConstant.country: StringConstant.US,
+      StringConstant.complete_checkout_url: StringConstant.url,
+      StringConstant.cancel_checkout_url: StringConstant.url
     };
     print('BODY PARAMETERS : ' + map.toString());
     return map;
@@ -83,11 +84,11 @@ class Rapyd {
 
     //Returning a map containing the headers and generated values
     return <String, String>{
-      "access_key": _ACCESS_KEY,
-      "signature": signature,
-      "salt": salt,
-      "timestamp": timestamp,
-      "Content-Type": "application/json",
+      StringConstant.access_key: _ACCESS_KEY,
+      StringConstant.signature: signature,
+      StringConstant.salt: salt,
+      StringConstant.timestamp: timestamp,
+      StringConstant.Content_type: "application/json",
     };
   }
 
@@ -106,10 +107,10 @@ class Rapyd {
     Map repBody = jsonDecode(response.body) as Map;
     //return data if request was successful
     if (response.statusCode == 200) {
-      return repBody["data"] as Map;
+      return repBody[StringConstant.data] as Map;
     }
 
     //throw error if request was unsuccessful
-    throw repBody["status"] as Map;
+    throw repBody[StringConstant.status] as Map;
   }
 }

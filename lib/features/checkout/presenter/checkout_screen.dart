@@ -1,3 +1,4 @@
+import 'package:donation/core/string_constant.dart';
 import 'package:donation/features/payment/presenter/rapyd.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -45,17 +46,20 @@ class CheckOutScreen extends StatelessWidget {
               return const Center(child: CircularProgressIndicator());
             default:
               if (snapshot.hasError) {
-                return const Center(child: Text('Some error occurred!'));
+                return const Center(child: Text(StringConstant.error));
               } else {
                 return WebView(
-                  initialUrl: snapshot.data["redirect_url"].toString(),
+                  zoomEnabled: true,
+                  initialUrl:
+                      snapshot.data[StringConstant.redirect_url].toString(),
                   javascriptMode: JavascriptMode.unrestricted,
                   onPageStarted: (url) {
                     //Exit webview widget once the current url matches either checkout completed or canceled urls
-                    if (url.contains(snapshot.data["complete_checkout_url"])) {
+                    if (url.contains(
+                        snapshot.data[StringConstant.complete_checkout_url])) {
                       Navigator.pop(context);
-                    } else if (url
-                        .contains(snapshot.data["cancel_checkout_url"])) {
+                    } else if (url.contains(
+                        snapshot.data[StringConstant.cancel_checkout_url])) {
                       Navigator.pop(context);
                     }
                   },

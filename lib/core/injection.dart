@@ -1,3 +1,4 @@
+import 'package:donation/features/checkout/presenter/bloc/checkout_bloc.dart';
 import 'package:donation/features/default/presenter/bloc/app_home_bloc.dart';
 import 'package:donation/features/goal/presenter/bloc/goal_bloc.dart';
 import 'package:donation/features/home/presenter/bloc/home_bloc.dart';
@@ -22,5 +23,6 @@ class Injection {
     getIt.registerSingleton<AppHomeBloc>(AppHomeBloc());
     getIt.registerSingleton<StatisticBloc>(StatisticBloc());
     getIt.registerSingleton<GoalBloc>(GoalBloc());
+    getIt.registerSingleton<CheckoutBloc>(CheckoutBloc());
   }
 }
