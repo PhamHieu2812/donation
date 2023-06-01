@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:donation/core/injection.dart';
+import 'package:donation/features/checkout/presenter/bloc/checkout_bloc.dart';
 import 'package:donation/features/default/presenter/app_home.dart';
 import 'package:donation/features/default/presenter/bloc/app_home_bloc.dart';
 import 'package:donation/features/goal/presenter/bloc/goal_bloc.dart';
@@ -10,7 +11,7 @@ import 'package:donation/features/details/presenter/detail_screen.dart';
 import 'package:donation/features/home/presenter/home_screen.dart';
 import 'package:donation/features/login/presenter/bloc/login_bloc.dart';
 import 'package:donation/features/login/presenter/login_screen.dart';
-import 'package:donation/features/payment/bloc/payment_bloc.dart';
+import 'package:donation/features/payment/presenter/bloc/payment_bloc.dart';
 import 'package:donation/features/profile/presenter/bloc/profile_bloc.dart';
 import 'package:donation/features/profile/presenter/profile_screen.dart';
 import 'package:donation/features/register/presenter/bloc/register_bloc.dart';
@@ -59,10 +60,13 @@ class Donation extends StatelessWidget {
         BlocProvider<GoalBloc>(
           create: (context) => getIt.get<GoalBloc>(),
         ),
+        BlocProvider<CheckoutBloc>(
+          create: (context) => getIt.get<CheckoutBloc>(),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: '/',
+        initialRoute: '/login',
         routes: {
           '/register': (context) {
             return RegisterScreen();

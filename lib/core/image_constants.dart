@@ -14,6 +14,10 @@ class ImageConstants {
   static const String discount = _path + 'discount.png';
   static const String entre = _path + 'entre.jpg';
   static const String fruit = _path + 'fresh-fruits.jpg';
+  static const String background = _path + 'background.png';
+  static const String clock = _path + 'clock.png';
+  static const String light1 = _path + 'light-1.png';
+  static const String light2 = _path + 'light-2.png';
 
   static const String ic_edu = _path + 'ic_edu.png';
   static const String ic_pill = _path + 'ic_pill.png';

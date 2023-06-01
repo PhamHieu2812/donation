@@ -1,8 +1,9 @@
+import 'package:donation/features/checkout/presenter/bloc/checkout_bloc.dart';
 import 'package:donation/features/default/presenter/bloc/app_home_bloc.dart';
 import 'package:donation/features/goal/presenter/bloc/goal_bloc.dart';
 import 'package:donation/features/home/presenter/bloc/home_bloc.dart';
 import 'package:donation/features/login/presenter/bloc/login_bloc.dart';
-import 'package:donation/features/payment/bloc/payment_bloc.dart';
+import 'package:donation/features/payment/presenter/bloc/payment_bloc.dart';
 import 'package:donation/features/profile/presenter/bloc/profile_bloc.dart';
 import 'package:donation/features/register/presenter/bloc/register_bloc.dart';
 import 'package:donation/features/splash/presenter/bloc/splash_bloc.dart';
@@ -22,5 +23,6 @@ class Injection {
     getIt.registerSingleton<AppHomeBloc>(AppHomeBloc());
     getIt.registerSingleton<StatisticBloc>(StatisticBloc());
     getIt.registerSingleton<GoalBloc>(GoalBloc());
+    getIt.registerSingleton<CheckoutBloc>(CheckoutBloc());
   }
 }
