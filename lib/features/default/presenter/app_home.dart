@@ -6,7 +6,6 @@ import 'package:donation/features/home/presenter/home_screen.dart';
 import 'package:donation/features/profile/presenter/profile_screen.dart';
 import 'package:donation/features/statistic/presenter/statistic_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:icon_forest/flat_icons_medium.dart';
 
 class AppHome extends StatefulWidget {
   const AppHome({super.key});
