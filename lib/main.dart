@@ -18,11 +18,13 @@ import 'package:donation/features/register/presenter/bloc/register_bloc.dart';
 import 'package:donation/features/register/presenter/register_screen.dart';
 import 'package:donation/features/statistic/presenter/bloc/statistic_bloc.dart';
 import 'package:donation/features/statistic/presenter/statistic_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   Injection.dependenciesInjection();
   log("APP RUNNING");
   runApp(const Donation());

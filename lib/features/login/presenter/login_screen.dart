@@ -131,7 +131,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 30,
+                        height: 20,
                       ),
                       InkWell(
                         onTap: () {
@@ -140,11 +140,9 @@ class LoginScreen extends StatelessWidget {
                         child: Container(
                           height: 50,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              gradient: LinearGradient(colors: [
-                                Color.fromRGBO(143, 148, 251, 1),
-                                Color.fromRGBO(143, 148, 251, .6),
-                              ])),
+                            borderRadius: BorderRadius.circular(10),
+                            color: AppColor.blue,
+                          ),
                           child: Center(
                             child: Text(
                               "Login",

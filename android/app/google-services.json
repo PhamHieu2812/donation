@@ -1,63 +1,41 @@
 {
   "project_info": {
-    "project_number": "609316818941",
-    "project_id": "e-wallet-a7ab5",
-    "storage_bucket": "e-wallet-a7ab5.appspot.com"
+    "project_number": "770315625797",
+    "project_id": "ewallet-99027",
+    "storage_bucket": "ewallet-99027.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:609316818941:android:3a6c9aed8f675c24475394",
+        "mobilesdk_app_id": "1:770315625797:android:5fcef3f767981525c1ca2c",
         "android_client_info": {
           "package_name": "com.example.donation"
         }
       },
       "oauth_client": [
         {
-          "client_id": "609316818941-pq7gj00qr9mk3pqndgmrg5t2h3jf9ocj.apps.googleusercontent.com",
+          "client_id": "770315625797-utlmbfg6df8qsu8qr3roi6ji3bafjp6s.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAC2rNeMLM-RePLjxPd8D7Gx4hc5RUu6M4"
+          "current_key": "AIzaSyDslMIDxB04KKbDS-Mz7Gi7WuE7hn1ko5U"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "609316818941-pq7gj00qr9mk3pqndgmrg5t2h3jf9ocj.apps.googleusercontent.com",
+              "client_id": "770315625797-utlmbfg6df8qsu8qr3roi6ji3bafjp6s.apps.googleusercontent.com",
               "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:609316818941:android:e7d0acfd70ad89f5475394",
-        "android_client_info": {
-          "package_name": "com.example.flutter_smart_wallet"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "609316818941-pq7gj00qr9mk3pqndgmrg5t2h3jf9ocj.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAC2rNeMLM-RePLjxPd8D7Gx4hc5RUu6M4"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
+            },
             {
-              "client_id": "609316818941-pq7gj00qr9mk3pqndgmrg5t2h3jf9ocj.apps.googleusercontent.com",
-              "client_type": 3
+              "client_id": "770315625797-2ja00db0ne630ng2q6ss1r9i8qqb14q2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.donation"
+              }
             }
           ]
         }
