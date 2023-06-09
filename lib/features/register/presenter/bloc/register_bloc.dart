@@ -8,17 +8,17 @@ part 'register_event.dart';
 part 'register_state.dart';
 
 class RegisterBloc extends Cubit<RegisterState> {
-  RegisterBloc() : super(RegisterInitial()) {
-    Future<bool> registerUser(String email, String password) async {
-      FirebaseAuth firebaseAuth = FirebaseAuth.instance;
-      try {
-        firebaseAuth.createUserWithEmailAndPassword(
-            email: email, password: password);
-        return true;
-      } catch (e) {
-        log(e.toString());
-      }
-      return false;
+  RegisterBloc() : super(RegisterInitial()) {}
+  Future<bool> registerUser(String email, String password) async {
+    FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+    try {
+      firebaseAuth.createUserWithEmailAndPassword(
+          email: email, password: password);
+      log('Register Succesfully');
+      return true;
+    } catch (e) {
+      log(e.toString());
     }
+    return false;
   }
 }

@@ -153,9 +153,7 @@ class RegisterScreen extends StatelessWidget {
                         height: 20,
                       ),
                       InkWell(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
+                        onTap: () async {},
                         child: Container(
                           height: 50,
                           decoration: BoxDecoration(
@@ -190,5 +188,12 @@ class RegisterScreen extends StatelessWidget {
             ),
           ),
         ));
+  }
+
+  bool validatePassword() {
+    if (passwordController.text == rePasswordController.text) {
+      return true;
+    }
+    return false;
   }
 }

@@ -10,6 +10,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const Padding(
           padding: EdgeInsets.symmetric(horizontal: 5),
           child: Text(

@@ -1,6 +1,8 @@
 import 'package:donation/core/app_color.dart';
 import 'package:donation/core/image_constants.dart';
+import 'package:donation/features/login/presenter/bloc/login_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -134,8 +136,27 @@ class LoginScreen extends StatelessWidget {
                         height: 20,
                       ),
                       InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(context, '/home');
+                        onTap: () async {
+                          bool login = await BlocProvider.of<LoginBloc>(context)
+                              .login(
+                                  emailController.text, passwordController.text)
+                              .timeout(Duration(seconds: 5), onTimeout: () {
+                            return false;
+                          });
+                          if (login) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text('Sign in successfully'),
+                              ),
+                            );
+                            Navigator.popAndPushNamed(context, '/apphome');
+                          } else {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text('Sign in failed'),
+                              ),
+                            );
+                          }
                         },
                         child: Container(
                           height: 50,
@@ -161,7 +182,7 @@ class LoginScreen extends StatelessWidget {
                           Navigator.pushNamed(context, '/register');
                         },
                         child: Text(
-                          "Forgot Password?",
+                          "Register",
                           style: TextStyle(
                               color: Color.fromRGBO(143, 148, 251, 1)),
                         ),

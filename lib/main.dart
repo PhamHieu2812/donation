@@ -90,6 +90,9 @@ class Donation extends StatelessWidget {
           },
           '/goal': (context) {
             return GoalScreen();
+          },
+          '/apphome': (context) {
+            return AppHome();
           }
         },
         home: AppHome(),
