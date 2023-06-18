@@ -2,7 +2,7 @@ import 'package:donation/core/widgets/back_button.dart';
 import 'package:donation/core/widgets/detail_progress_card.dart';
 import 'package:donation/core/widgets/main_details.dart';
 import 'package:donation/core/widgets/organiser.dart';
-import 'package:donation/features/payment/presenter/widgets/donate_screen.dart';
+import 'package:donation/features/payment/presenter/donate_screen.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {

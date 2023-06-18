@@ -40,7 +40,7 @@ class AmountsGridCard extends StatelessWidget {
           ),
           child: MaterialButton(
             padding: EdgeInsets.zero,
-            onPressed: () => select(1, 50.0),
+            onPressed: () => select(1, 50),
             child: const Align(
               child: Text(
                 "\$50",
@@ -70,7 +70,7 @@ class AmountsGridCard extends StatelessWidget {
           ),
           child: MaterialButton(
             padding: EdgeInsets.zero,
-            onPressed: () => select(2, 100.0),
+            onPressed: () => select(2, 100),
             child: const Align(
               child: Text(
                 "\$100",
@@ -100,7 +100,7 @@ class AmountsGridCard extends StatelessWidget {
           ),
           child: MaterialButton(
             padding: EdgeInsets.zero,
-            onPressed: () => select(3, 200.0),
+            onPressed: () => select(3, 200),
             child: const Align(
               child: Text(
                 "\$200",
@@ -130,7 +130,7 @@ class AmountsGridCard extends StatelessWidget {
           ),
           child: MaterialButton(
             padding: EdgeInsets.zero,
-            onPressed: () => select(4, 250.0),
+            onPressed: () => select(4, 250),
             child: const Align(
               child: Text(
                 "\$250",

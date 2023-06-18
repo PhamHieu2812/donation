@@ -138,11 +138,9 @@ class LoginScreen extends StatelessWidget {
                       InkWell(
                         onTap: () async {
                           bool login = await BlocProvider.of<LoginBloc>(context)
-                              .login(
-                                  emailController.text, passwordController.text)
-                              .timeout(Duration(seconds: 5), onTimeout: () {
-                            return false;
-                          });
+                              .login(emailController.text,
+                                  passwordController.text);
+
                           if (login) {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
