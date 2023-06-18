@@ -1,8 +1,9 @@
 import 'package:donation/core/app_color.dart';
 import 'package:donation/core/image_constants.dart';
-import 'package:donation/features/login/presenter/bloc/login_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'bloc/login_bloc.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -18,7 +19,7 @@ class LoginScreen extends StatelessWidget {
               children: <Widget>[
                 Container(
                   height: 400,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage(ImageConstants.background),
                           fit: BoxFit.fill)),
@@ -29,7 +30,7 @@ class LoginScreen extends StatelessWidget {
                         width: 80,
                         height: 200,
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage(
                                 ImageConstants.light1,
@@ -43,7 +44,7 @@ class LoginScreen extends StatelessWidget {
                         width: 80,
                         height: 150,
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage(
                                 ImageConstants.light2,
@@ -58,7 +59,7 @@ class LoginScreen extends StatelessWidget {
                         width: 80,
                         height: 150,
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage(
                                 ImageConstants.clock,
@@ -69,8 +70,8 @@ class LoginScreen extends StatelessWidget {
                       ),
                       Positioned(
                         child: Container(
-                          margin: EdgeInsets.only(top: 50),
-                          child: Center(
+                          margin: const EdgeInsets.only(top: 50),
+                          child: const Center(
                             child: Text(
                               "Login",
                               style: TextStyle(
@@ -85,15 +86,15 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(30.0),
+                  padding: const EdgeInsets.all(30.0),
                   child: Column(
                     children: <Widget>[
                       Container(
-                        padding: EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(5),
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(10),
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                   color: Color.fromRGBO(143, 148, 251, .2),
                                   blurRadius: 20.0,
@@ -102,8 +103,8 @@ class LoginScreen extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.all(8.0),
-                              decoration: BoxDecoration(
+                              padding: const EdgeInsets.all(8.0),
+                              decoration: const BoxDecoration(
                                 border: Border(
                                   bottom: BorderSide(color: AppColor.grey),
                                 ),
@@ -118,7 +119,7 @@ class LoginScreen extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(8.0),
                               child: TextField(
                                 controller: passwordController,
                                 obscureText: true,
@@ -132,7 +133,7 @@ class LoginScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       InkWell(
@@ -162,7 +163,7 @@ class LoginScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                             color: AppColor.blue,
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "Login",
                               style: TextStyle(
@@ -172,14 +173,14 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 70,
                       ),
                       InkWell(
                         onTap: () {
                           Navigator.pushNamed(context, '/register');
                         },
-                        child: Text(
+                        child: const Text(
                           "Register",
                           style: TextStyle(
                               color: Color.fromRGBO(143, 148, 251, 1)),
