@@ -4,10 +4,10 @@ import 'package:donation/core/injection.dart';
 import 'package:donation/features/checkout/presenter/bloc/checkout_bloc.dart';
 import 'package:donation/features/default/presenter/app_home.dart';
 import 'package:donation/features/default/presenter/bloc/app_home_bloc.dart';
+import 'package:donation/features/details/presenter/detail_screen.dart';
 import 'package:donation/features/goal/presenter/bloc/goal_bloc.dart';
 import 'package:donation/features/goal/presenter/goal_screen.dart';
 import 'package:donation/features/home/presenter/bloc/home_bloc.dart';
-import 'package:donation/features/details/presenter/detail_screen.dart';
 import 'package:donation/features/home/presenter/home_screen.dart';
 import 'package:donation/features/login/presenter/bloc/login_bloc.dart';
 import 'package:donation/features/login/presenter/login_screen.dart';
@@ -23,7 +23,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  //await Firebase.initializeApp();
+  // await Firebase.initializeApp();
   Injection.dependenciesInjection();
   log("APP RUNNING");
   runApp(const Donation());
@@ -73,13 +73,13 @@ class Donation extends StatelessWidget {
             return LoginScreen();
           },
           '/home': (context) {
-            return HomeScreen();
+            return const HomeScreen();
           },
           '/detail': (context) {
             return DetailsScreen();
           },
           '/profile': (context) {
-            return ProfileScreen();
+            return const ProfileScreen();
           },
           '/statistic': (context) {
             return StatisticScreen();
@@ -88,10 +88,10 @@ class Donation extends StatelessWidget {
             return GoalScreen();
           },
           '/apphome': (context) {
-            return AppHome();
+            return const AppHome();
           }
         },
-        home: AppHome(),
+        home: const AppHome(),
       ),
     );
   }
